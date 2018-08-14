@@ -20616,7 +20616,7 @@
 	            var optionNodes = _this.props.options.map(function (option) {
 	                return _react2.default.createElement(
 	                    'option',
-	                    { value: option.id, key: option.id },
+	                    { value: option.id, key: option.id, disabled: typeof option.disabled === 'undefined' ? false : option.disabled },
 	                    option.text
 	                );
 	            });
