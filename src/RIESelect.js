@@ -22,7 +22,7 @@ export default class RIESelect extends RIEStatefulBase {
 
     renderEditingComponent = () => {
         const optionNodes = this.props.options.map(function(option) {
-            return <option value={option.id} key={option.id}>{option.text}</option>
+            return <option value={option.id} key={option.id} disabled={typeof option.disabled === 'undefined' ? false : option.disabled}>{option.text}</option>
         });
 
         return <select disabled={(this.props.shouldBlockWhileLoading && this.state.loading)}
